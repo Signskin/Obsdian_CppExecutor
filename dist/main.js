@@ -213,9 +213,15 @@ class SettingTabView extends obsidian_1.PluginSettingTab {
                 .setCta()
                 .onClick(() => __awaiter(this, void 0, void 0, function* () { this.killProcess(); }));
         });
+        // Why this does not work?
+        // const descEl = killProcessSetting.settingEl.querySelector('.setting-item-description');
+        // if (descEl) {
+        //     descEl.setAttribute('color', 'red');
+        // }
+        // using .mod_warning instead
         const descEl = killProcessSetting.settingEl.querySelector('.setting-item-description');
         if (descEl) {
-            descEl.setAttribute('color', 'red');
+            descEl.classList.add('mod-warning');
         }
     }
     killProcess() {

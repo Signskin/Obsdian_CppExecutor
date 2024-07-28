@@ -192,9 +192,15 @@ export class SettingTabView extends PluginSettingTab {
             });
 
         // Why this does not work?
+        // const descEl = killProcessSetting.settingEl.querySelector('.setting-item-description');
+        // if (descEl) {
+        //     descEl.setAttribute('color', 'red');
+        // }
+
+        // using .mod_warning instead
         const descEl = killProcessSetting.settingEl.querySelector('.setting-item-description');
         if (descEl) {
-            descEl.setAttribute('color', 'red');
+            descEl.classList.add('mod-warning');
         }
     }
 
